@@ -1,0 +1,14 @@
+﻿article(class="#{post.value.emotion}",data-post-id="#{post.id}")
+	h4
+		a(href="/user/#{post.value.author.userKey}")
+			img.icon(src="#{post.value.author.icon}")
+			|#{post.value.author.userName}
+			small.text-primary #{post.value.author.userKey}
+		small !{new Date(post.value.postedAt).toLocaleString()}
+	pre #{post.value.body.text}
+	.buttons
+		button.btn.btn-xs.btn-success.positive-button (｀・ω・´)
+		button.btn.btn-xs.btn-warning.negative-button (´・ω・｀)
+	if post.value.attach
+		a(href="#{post.value.attach.url}",data-lity)
+			object(data="#{post.value.attach.url}")

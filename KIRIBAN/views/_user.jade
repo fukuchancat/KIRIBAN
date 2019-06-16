@@ -1,0 +1,32 @@
+﻿extends _layout
+block main
+	- var host = false;
+	if passport
+		- var host = (passport.id == user.id);
+	main
+		#user-banner.banner(style="background-image: url('#{user.value.banner}')")
+			.container
+				h1 #{user.value.userName}
+					small #{user.value.userKey}
+				p.mb-2
+					|あなたは
+					span.number #{counters.length}
+					|人目の来場者です。
+		.content.row.h-100
+			.col-sm-2.sidenav.text-center
+				p
+					a(href='/user/#{user.value.userKey}') プロフィール
+				each content in contents
+					p
+						a(href='/user/#{user.value.userKey}/#{content.value._id}') #{content.value.contentName}
+				if host
+					p
+						a.small.text-muted(href='/user/#{user.value.userKey}/add')
+							| コンテンツを追加
+			.col-sm-8.main.text-left
+				block content
+			.col-sm-2.sidenav
+				.well
+					p ADS
+				.well
+					p ADS

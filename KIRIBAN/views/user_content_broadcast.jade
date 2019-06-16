@@ -1,0 +1,23 @@
+﻿extends _user_content
+block headline
+	if passport
+		#resumed.spaced.row
+			.col-sm-9
+				p (放送中の情報とかそういうアレ)
+			.col-sm-3
+				if host
+					button#stop-broadcast.btn.btn-warning 放送終了
+		#videos.spaced
+		#paused.spaced.container-fluid.text-center
+			p 放送休止中です
+			if host
+				button#start-broadcast.btn.btn-danger 放送開始
+block include
+	include _content_broadcast
+block append scripts
+	script(src='https://cdn.webrtc-experiment.com:443/RTCMultiConnection.min.js')
+	script(src='/javascripts/broadcast.js')
+	if host
+		script(src='/javascripts/broadcast_host.js')
+	else
+		script(src='/javascripts/broadcast_guest.js')

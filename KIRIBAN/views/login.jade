@@ -1,0 +1,24 @@
+﻿extends _layout
+block title
+	title ログイン | KIRIBAN
+block main
+	main
+		.container
+			.row
+				.col-md-7
+					h2 ログイン
+					form#login-form(action='/login',method='post')
+						.row
+							.col-sm-5
+								|ユーザーキー/メールアドレス
+							.col-sm-7
+								input(type='text',name='userKey').form-control
+						.row
+							.col-sm-5
+								|パスワード
+							.col-sm-7
+								input(type='password',name='password').form-control
+						input(type='submit' value='ログイン').btn.btn-primary.btn-block
+						a(href='register').btn.btn-info.btn-block 新規登録
+				.col-md-5
+					h4 ADS

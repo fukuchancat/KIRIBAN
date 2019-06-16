@@ -1,0 +1,18 @@
+﻿extends _user
+block prepend stylesheets
+	link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.min.css')
+block content
+	h2 #{content.value.contentName}
+	block headline
+	if passport
+		include _form
+	block posts
+		#posts(data-content-id="#{content.id}")
+			each post in posts
+				block include
+block append scripts
+	script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/convnetjs/0.3.0/convnet.js')
+	script(src='/javascripts/autosize.js')
+	script(src='/javascripts/chat.js')

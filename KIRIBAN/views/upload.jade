@@ -1,0 +1,11 @@
+﻿extends _layout
+block title
+	title ログイン | KIRIBAN
+block main
+	main
+		.container
+			h2 アップロード
+			include _form
+block append scripts
+	script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+	script(src='/javascripts/upload.js')

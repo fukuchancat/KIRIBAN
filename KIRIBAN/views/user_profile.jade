@@ -1,0 +1,20 @@
+﻿extends _user
+block content
+	h2 プロフィール
+	.row.mt-2
+		.col-sm-4
+			img(alt="#{user.value.userName}",src="#{user.value.icon}").w-100
+		.col-sm-8
+			table.table
+				tr
+					th ユーザーID
+					td #{user.id}
+				tr
+					th ユーザーキー
+					td #{user.value.userKey}
+				tr
+					th 説明文
+					if user.value.description == ""
+						td.text-muted (まだ説明文を書いていないようです)
+					else
+						td #{user.value.description}

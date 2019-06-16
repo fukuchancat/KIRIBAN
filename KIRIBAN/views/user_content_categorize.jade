@@ -1,0 +1,9 @@
+﻿extends _user_content
+
+block include
+	include _content_categorize
+block prepend scripts
+	script(src="/javascripts/netObj2.js")
+block append scripts
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/convnetjs/0.3.0/convnet.js')
+	script(src="/javascripts/categorize.js")

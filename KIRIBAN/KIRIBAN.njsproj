@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>KIRIBAN</Name>
+    <RootNamespace>KIRIBAN</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>055c73b8-657d-4e46-968a-b8dcf51f4b40</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.json" />
+    <Content Include="bin\ChangeConfig.ps1" />
+    <Content Include="bin\download.ps1" />
+    <Content Include="bin\setup_web.cmd" />
+    <Content Include="bin\node.cmd" />
+    <Content Include="package.json" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="README.md" />
+    <Content Include="views\complete.jade" />
+    <Content Include="views\error.jade" />
+    <Content Include="views\register.jade" />
+    <Content Include="views\upload.jade" />
+    <Content Include="views\user_add.jade" />
+    <Content Include="views\user_content_broadcast.jade" />
+    <Content Include="views\user_content_categorize.jade" />
+    <Content Include="views\user_content_normal.jade" />
+    <Content Include="views\home.jade" />
+    <Content Include="public\stylesheets\common.styl" />
+    <Content Include="views\login.jade" />
+    <Content Include="views\user_content_emotion.jade" />
+    <Content Include="views\verify.jade" />
+    <Content Include="views\_content_broadcast.jade" />
+    <Content Include="views\_content_categorize.jade" />
+    <Content Include="views\_content_emotion.jade" />
+    <Content Include="views\_content_normal.jade" />
+    <Content Include="views\_form.jade" />
+    <Content Include="views\_user.jade" />
+    <Content Include="views\user_profile.jade" />
+    <Content Include="views\_layout.jade" />
+    <Content Include="views\_user_content.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\uploads\" />
+    <Folder Include="typings\globals\connect-flash\" />
+    <Folder Include="typings\globals\express-session\" />
+    <Folder Include="typings\globals\grunt\" />
+    <Folder Include="typings\globals\nodemailer\" />
+    <Folder Include="typings\globals\passport\" />
+    <Folder Include="views\" />
+    <Folder Include="routes\" />
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\bootstrap\" />
+    <Folder Include="typings\globals\jquery\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\socket.io\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\bootstrap\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\connect-flash\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express-session\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\grunt\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\nodemailer\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\passport\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\socket.io\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="Gruntfile.js" />
+    <Compile Include="public\javascripts\autosize.js" />
+    <Compile Include="public\javascripts\bootstrap.min.js" />
+    <Compile Include="public\javascripts\broadcast.js" />
+    <Compile Include="public\javascripts\broadcast_guest.js" />
+    <Compile Include="public\javascripts\broadcast_host.js" />
+    <Compile Include="public\javascripts\categorize.js" />
+    <Compile Include="public\javascripts\chat.js" />
+    <Compile Include="public\javascripts\netObj2.js" />
+    <Compile Include="public\javascripts\upload.js" />
+    <Compile Include="public\javascripts\verify.js" />
+    <Compile Include="routes\id.js" />
+    <Compile Include="routes\register.js" />
+    <Compile Include="routes\user.js" />
+    <Compile Include="routes\home.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\login.js" />
+    <Compile Include="routes\upload.js" />
+    <Compile Include="routes\logout.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

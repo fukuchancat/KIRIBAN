@@ -1,0 +1,27 @@
+﻿extends _user
+block content
+	h2 コンテンツを追加
+	form#content-form.mt-2(method="post")
+		div
+			h3 コンテンツのタイトル
+			input(type="text",name="contentName",required).form-control
+		div
+			h3 コンテンツの種類
+			.flex-wrap
+				label
+					input(type="radio",name="contentType",value="normal",checked,required)
+					img(alt="",src="")
+					p ノーマル
+				label
+					input(type="radio",name="contentType",value="emotion")
+					img(alt="",src="")
+					p 感情表現
+				label
+					input(type="radio",name="contentType",value="categorize")
+					img(alt="",src="")
+					p 画像分類
+				label
+					input(type="radio",name="contentType",value="broadcast")
+					img(alt="",src="")
+					p 生放送
+		input(type="submit").btn.btn-primary.btn-block

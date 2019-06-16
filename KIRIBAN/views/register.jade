@@ -1,0 +1,11 @@
+﻿extends _layout
+block title
+	title 会員登録 | KIRIBAN
+block main
+	main
+		.container
+			h2 会員登録
+			p メールアドレスを入力してください。
+			form(method="post")
+				input(type="email",name="email").form-control
+				input(type="submit").btn.btn-large.btn-block.mt-2
