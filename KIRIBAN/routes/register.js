@@ -9,8 +9,8 @@ var router = express.Router();
 var smtp = mailer.createTransport({
 	service: 'Gmail',
     auth: {
-        user: 'k1r1b4n@gmail.com',
-        pass: 'N0d3Ma113r'
+        user: '<MAILADDRESS>',
+        pass: '<PASSWORD>'
     }
 });
 
@@ -92,7 +92,7 @@ router.post('/complete', function (req, res) {
 			if (body.rows.length > 0) {
 				var value = body.rows[0].value;
 
-				var secret = 'ﾝQ秉ｻ0R”７みⅨＭ？6Ｇﾗ畚{４Ｃⅰ媾6Ⅱ9４ⅸDR$’[Ａ～Ｒ：9？';
+				var secret = '<SECRET>';
 				var hmac = crypto.createHmac('sha256', secret);
 				hmac.update(req.body.password);
 				var hPass = hmac.digest('hex');

@@ -21,7 +21,7 @@ var routes = require('./routes');
 
 // セッションの設定
 var sessionMiddleware = session({
-	secret: 'ZB82CyMh5BhbN9kEieVreQLK6dW-Z_y7bH2ZW2-La',
+	secret: '<SECRET>',
 	resave: true,
 	saveUninitialized: false
 });

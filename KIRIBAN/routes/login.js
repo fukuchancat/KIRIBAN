@@ -11,7 +11,7 @@ passport.use(new LocalStrategy({
 	usernameField: 'userKey',
 	passwordField: 'password'
 }, function (username, password, done) {
-	var secret = 'ﾝQ秉ｻ0R”７みⅨＭ？6Ｇﾗ畚{４Ｃⅰ媾6Ⅱ9４ⅸDR$’[Ａ～Ｒ：9？';
+	var secret = '<SECRET>';
 	var hmac = crypto.createHmac('sha256', secret);
 	hmac.update(password);
 	var hPass = hmac.digest('hex');
